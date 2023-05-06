@@ -1,0 +1,3 @@
+FUNCTION-POOL ZOB00_FG_INTERFACE_000.       "MESSAGE-ID ..
+
+* INCLUDE LZOB00_FG_INTERFACE_000D...        " Local class definition

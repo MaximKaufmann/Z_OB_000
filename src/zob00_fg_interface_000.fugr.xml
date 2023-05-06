@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Schnittstellen Übungen - DW</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZOB00_FG_INTERFACE_000TOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZOB00_FG_INTERFACE_000</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZBAPI_OB00_AIRLINE_000</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Methode für BAPI</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>ID</PARAMETER>
+       <TYP>ZBAPI_OB00_AIRLINE_000-CARRID</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>RETURN</PARAMETER>
+       <TYP>BAPIRET2</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>ITEMTAB</PARAMETER>
+       <DBSTRUCT>ZBAPI_OB00_AIRLINE_000</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>ID</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ITEMTAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Struktur für BAPI der Tabelle SCARR</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZOB00_BAPI_AIRLINE_ID_000</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Funktionsbaustein für BAPI</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>ID</PARAMETER>
+       <TYP>S_CARRID</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>RETURN</PARAMETER>
+       <TYP>BAPIRET2</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>ITEMTAB</PARAMETER>
+       <DBSTRUCT>SCARR</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>ID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kurzbezeichnung der Fluggesellschaft</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Returnparameter</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ITEMTAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Struktur der Tabelle SCARR</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZOB00_CREATE_AIRLINE_000</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Updated die Informationen einer Fluggesellschaft</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IS_AIRLINE</PARAMETER>
+       <TYP>SCARR</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IS_AIRLINE</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZOB00_GET_AIRLINE_000</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Holt die Informationen der Fluggesselschaft</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_AIRLINE_ID</PARAMETER>
+       <TYP>SCARR-CARRID</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>ET_AIRLINE_INFO</PARAMETER>
+       <DBSTRUCT>SCARR</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_AIRLINE_ID</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_AIRLINE_INFO</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZOB00_GET_AIRLINE_ID_000</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Vergeben Fluggesellschaften IDs</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_AIRLINE_IDS</PARAMETER>
+       <DBSTRUCT>ZOB00_AIRLINE_IDS</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>T_AIRLINE_IDS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Struktur für Airline Ids</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
